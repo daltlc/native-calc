@@ -15,7 +15,7 @@ const inputButtons = [
     [1, 2, 3, '/'],
     [4, 5, 6, '*'],
     [7, 8, 9, '-'],
-    [0, '.', '=', '+']
+    [0, '.', '=', '+','C']
 ];
 import Style from './style'
 
@@ -91,6 +91,10 @@ export default class App extends Component {
   }
   _handleStringInput(str) {
     switch (str) {
+        case 'C':
+          this.setState({
+            inputValue:0
+          });
         case '/':
         case '*':
         case '+':
