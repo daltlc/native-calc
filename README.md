@@ -1,1 +1,1 @@
-Simple React-Native Calculator to understand Native better.
+Custom Native React Calculator to help wtih tip distribution.
