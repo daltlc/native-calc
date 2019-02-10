@@ -13,9 +13,9 @@ import InputButton from './src/InputButton';
 // Define the input buttons that will be displayed in the calculator.
 const inputButtons = [
     [1, 2, 3, '/','MA'],
-    [4, 5, 6, '*'],
-    [7, 8, 9, '-'],
-    [0, '.', '=', '+','C','P']
+    [4, 5, 6, '*','SC'],
+    [7, 8, 9, '-','C'],
+    [0, '.', '=', '+','P']
 ];
 
 
@@ -43,6 +43,9 @@ export default class App extends Component {
             </View>
             <View style={Style.inputContainer}>
                 {this._renderInputButtons()}
+            </View>
+            <View style={Style.displayContainer}>
+            <Text style={Style.displayText}>{this.state.hours + ','}</Text>
             </View>
         </View>
     )
@@ -108,11 +111,10 @@ export default class App extends Component {
         case 'C':
           this.setState({
             inputValue:0,
-            hours:[]            
+            hours:[]      
           });
         case 'P':
         this.setState({ hours: [...this.state.hours, this.state.inputValue] })
-          alert([this.state.hours, this.state.inputValue]);
         case '/':
         case '*':
         case '+':
