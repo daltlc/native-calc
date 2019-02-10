@@ -31,6 +31,7 @@ let Style = StyleSheet.create({
         flex: 2,
         backgroundColor: '#32255D',
         justifyContent: 'center'
+        
     },
 
     displayText: {

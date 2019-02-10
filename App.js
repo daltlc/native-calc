@@ -12,11 +12,13 @@ import InputButton from './src/InputButton';
 
 // Define the input buttons that will be displayed in the calculator.
 const inputButtons = [
-    [1, 2, 3, '/'],
+    [1, 2, 3, '/','MA'],
     [4, 5, 6, '*'],
     [7, 8, 9, '-'],
-    [0, '.', '=', '+','C']
+    [0, '.', '=', '+','C','P']
 ];
+
+
 import Style from './style'
 
 import React, {Component} from 'react';
@@ -28,7 +30,9 @@ export default class App extends Component {
     this.state = {
       inputValue: 0,
       previousValue: 0,
-      selectedSymbol:null
+      selectedSymbol:null,
+      hours:[],
+      constant: 10,
     }
   }
   render() {
@@ -43,6 +47,7 @@ export default class App extends Component {
         </View>
     )
 }
+
 
 /**
  * For each row in `inputButtons`, create a row View and add create an InputButton for each input in the row.
@@ -91,10 +96,23 @@ export default class App extends Component {
   }
   _handleStringInput(str) {
     switch (str) {
+        case 'MA':
+          let hours = this.state.hours
+          let hoursLength = this.state.hours.length
+          for(i = 0; i < hoursLength; i++){
+            this.setState({
+              hours: hours[i] = hours[i] * this.state.constant
+            })
+            alert(hours);
+        }
         case 'C':
           this.setState({
-            inputValue:0
+            inputValue:0,
+            hours:[]            
           });
+        case 'P':
+        this.setState({ hours: [...this.state.hours, this.state.inputValue] })
+          alert([this.state.hours, this.state.inputValue]);
         case '/':
         case '*':
         case '+':
