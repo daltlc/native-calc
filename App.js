@@ -44,6 +44,9 @@ export default class App extends Component {
             <View style={Style.inputContainer}>
                 {this._renderInputButtons()}
             </View>
+            <View style={Style.displayContainer}>
+            <Text style={Style.displayText}>{this.state.hours + ','}</Text>
+            </View>
         </View>
     )
 }
@@ -108,7 +111,7 @@ export default class App extends Component {
         case 'C':
           this.setState({
             inputValue:0,
-            hours:[]            
+            hours:[]          
           });
         case 'P':
         this.setState({ hours: [...this.state.hours, this.state.inputValue] })
