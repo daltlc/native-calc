@@ -4,15 +4,9 @@ let Style = StyleSheet.create({
     rootContainer: {
         flex: 1
     },
-
-    displayContainer: {
-        flex: 2,
-        backgroundColor: '#193441'
-    },
-
     inputContainer: {
         flex: 8,
-        backgroundColor: '#3E606F'
+        backgroundColor: '#32255D'
     },
 
     inputButton: {
@@ -20,7 +14,7 @@ let Style = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderWidth: 0.5,
-        borderColor: '#91AA9D'
+        borderColor: '#A8D299'
     },
 
     inputButtonText: {
@@ -35,7 +29,7 @@ let Style = StyleSheet.create({
 
     displayContainer: {
         flex: 2,
-        backgroundColor: '#193441',
+        backgroundColor: '#32255D',
         justifyContent: 'center'
     },
 
@@ -47,7 +41,7 @@ let Style = StyleSheet.create({
         padding: 20
     },
     inputButtonHighlighted: {
-        backgroundColor: '#193441'
+        backgroundColor: 'black'
     },
  }
 )
